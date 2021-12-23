@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        if(config('app.debug') == false) {
+        if(config('app.debug') == true) {
             User::factory()->count(10)->create();
         }
     }
