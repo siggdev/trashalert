@@ -14,14 +14,8 @@ class CalendarSeeder extends Seeder
      */
     public function run()
     {
-        $calendars = [
-            [
-                'name' => 'Siggenhofen',
-            ],
-        ];
-
-        foreach($calendars as $calendar) {
-            Calendar::updateOrCreate($calendar);
+        if(config('app.debug') == false) {
+            Calendar::factory()->count(10)->create();
         }
     }
 }
