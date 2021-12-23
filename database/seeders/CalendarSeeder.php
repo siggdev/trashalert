@@ -14,7 +14,7 @@ class CalendarSeeder extends Seeder
      */
     public function run()
     {
-        if(config('app.debug') == false) {
+        if(config('app.debug') == true) {
             Calendar::factory()->count(5)->create();
         }
     }
